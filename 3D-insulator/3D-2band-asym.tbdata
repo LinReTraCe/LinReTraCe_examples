@@ -1,0 +1,29 @@
+begin hopping
+#  valence band
+   0  0  0     1 1 -1.55
+  +1  0  0     1 1  0.25
+  -1  0  0     1 1  0.25
+   0 +1  0     1 1  0.25
+   0 -1  0     1 1  0.25
+   0  0 +1     1 1  0.25
+   0  0 -1     1 1  0.25
+#  conduction band
+   0  0  0     2 2 +1.85
+  +1  0  0     2 2 -0.30
+  -1  0  0     2 2 -0.30
+   0 +1  0     2 2 -0.30
+   0 -1  0     2 2 -0.30
+   0  0 +1     2 2 -0.30
+   0  0 -1     2 2 -0.30
+end hopping
+
+begin atoms
+  # sort rx, ry, rz
+  1 0 0 0
+end atoms
+
+begin real_lattice
+  1 0 0
+  0 1 0
+  0 0 1
+end real_lattice

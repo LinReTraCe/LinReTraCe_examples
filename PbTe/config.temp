@@ -1,0 +1,19 @@
+[General]
+RunMode         =  temp
+EnergyFile      =  PbTe.hdf5
+OutputFile      =  output.hdf5
+BFieldMode      =  T
+Interband       =  F
+Intraband       =  T
+Boltzmann       =  T
+QuadResponse    =  T
+FermiOccupation =  T
+
+[TempMode]
+[[Scattering]]
+TMinimum =  50.0
+TMaximum =  800.0
+TPoints  =  50
+TLogarithmic = F
+ScatteringCoefficients     =  20e-3 0 6e-8
+QuasiParticleCoefficients  =  1

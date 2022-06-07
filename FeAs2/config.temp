@@ -1,0 +1,24 @@
+[General]
+RunMode         =  temp
+EnergyFile      =  FeAs2.peierls.hdf5
+OutputFile      =  output.temp.hdf5
+BFieldMode      =  F
+Interband       =  F
+Intraband       =  T
+Boltzmann       =  T
+FermiOccupation =  T
+QuadResponse    =  T
+
+[TempMode]
+NImp = 1
+NominalDoping = T
+[[Scattering]]
+TMinimum =  1.0
+TMaximum =  500.0
+TPoints  =  200.0
+TLogarithmic = T
+ScatteringCoefficients     =  7e-5 0 5e-9
+QuasiParticleCoefficients  =  1
+[[Impurities]]
+[[[1]]]
+Conduction = +1 2e-6 0.015 1

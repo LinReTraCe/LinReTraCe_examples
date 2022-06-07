@@ -1,0 +1,23 @@
+[General]
+RunMode         =  mu
+EnergyFile      =  honeycomb.hdf5
+OutputFile      =  output.hdf5
+BFieldMode      =  F
+Interband       =  F
+Intraband       =  T
+Boltzmann       =  F
+QuadResponse    =  T
+FermiOccupation =  T
+FullOutput      =  full
+
+
+[MuMode]
+[[Scattering]]
+Temperature         = 300
+MuMinimum           = 0.8
+MuMaximum           = 0.8
+MuPoints            = 1
+MuLogarithmic       = F
+MuAbsolute          = T
+QuasiParticleWeight = 1
+ScatteringRate      = 1e-5

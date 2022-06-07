@@ -1,0 +1,19 @@
+[General]
+RunMode         =  temp
+EnergyFile      =  2D-1band.hdf5
+OutputFile      =  output.hdf5
+BFieldMode      =  T
+Interband       =  F
+Intraband       =  T
+Boltzmann       =  T
+FermiOccupation =  F
+QuadResponse    =  T
+
+[TempMode]
+[[Scattering]]
+TMinimum =  1
+TMaximum =  1000
+TPoints  =  200
+TLogarithmic = T
+ScatteringCoefficients     =  1e-4
+QuasiParticleCoefficients  =  1

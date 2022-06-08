@@ -1,8 +1,8 @@
 # LinReTraCe examples
 
-Please refer to [LinReTraCe](https://github.com/LinReTraCe/LinReTraCe) for a detailed program description. This repository contains the necessary input and config files to reproduce the data in [arxiv:2112.07604](https://arxiv.org/abs/2112.07604). Please note that due to storage limitations the prepared files contain a coarser momentum mesh. For the model systems considered, prepare the energy files with the number of k-points specified in the publication.
-The DFT calculations provided contain $10 \times 10 \times 20$ (FeAs2) and $8 \times 8 \times 8$ (Tl-doped PbTe) k-points.
-We used the following pre-processing interfaces to produce the provided energy files.
+Please refer to [LinReTraCe](https://github.com/LinReTraCe/LinReTraCe) for a detailed program description. This repository contains the necessary input and config files to reproduce the test cases' data in [arxiv:2112.07604](https://arxiv.org/abs/2112.07604). Please note that due to storage limitations the prepared files here contain a coarser momentum mesh. For the model systems considered, prepare the energy files with the number of k-points specified in the publication.
+The DFT calculations provided here contain only $10 \times 10 \times 20$ (FeAs2) and $8 \times 8 \times 8$ (Tl-doped PbTe) k-points. With the available WIEN2k structure files, band-structure calculations using the momentum mesh specified in the publication can be performed and used as input.
+The following pre-processing interfaces have been to produce the provided LinReTraCe energy files.
 
 ### 2D-metal
 ```
@@ -37,9 +37,17 @@ ldft FeAs2 --interp 5 --output FeAs2.peierls.hdf5
 ldft PbTe --interp 5 --output PbTe.hdf5
 ```
 
+## Handling
 The provided energy files can be inspected via
 ```
 lprint <energy file> info
 lprint <energy file> dos -p
 lprint <energy file> path
 ```
+
+LinReTraCe calculations can then be run with
+```
+linretrace <config.lrtc>
+```
+where config.lrtc is the provided configuration file of the respective test case.
+

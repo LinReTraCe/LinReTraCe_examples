@@ -1,7 +1,8 @@
 # LinReTraCe examples
 
 Please refer to [LinReTraCe](https://github.com/LinReTraCe/LinReTraCe) for a detailed program description. This repository contains the necessary input and config files to reproduce the test cases' data in [arxiv:2206.06097](https://arxiv.org/abs/2206.06097). Please note that due to storage limitations the prepared files here contain a coarser momentum mesh. For the model systems considered, prepare the energy files with the number of k-points specified in the publication.
-The DFT calculations provided here contain only $10 \times 10 \times 20$ (FeAs2) and $8 \times 8 \times 8$ (Tl-doped PbTe) k-points. With the available WIEN2k structure files, band-structure calculations using the momentum mesh specified in the publication can be performed and used as input.
+The DFT calculations provided here contain only $10 \times 10 \times 20$ (FeAs2 - PBE) and $8 \times 8 \times 8$ (Tl-doped PbTe - PBE) k-points. With the available WIEN2k structure files, band-structure calculations using the momentum mesh specified in the publication can be performed and used as input.
+Please note that I also included a similar FeAs2 calculation (mBJ) in Wannier90 format (the DFT and Wannier90 calculations are not comparable due to the vastly different band gaps).
 The following pre-processing interfaces have been to produce the provided LinReTraCe energy files.
 
 ### 2D-metal
@@ -30,6 +31,10 @@ ldft FeAs2 --optic --output FeAs2.optic.hdf5
 
 ```
 ldft FeAs2 --interp 5 --output FeAs2.peierls.hdf5
+```
+
+```
+lwann FeAs2_wann --output FeAs2.wann90.hdf5
 ```
 
 ### Tl-doped PbTe
